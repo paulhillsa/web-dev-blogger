@@ -17,13 +17,13 @@ function AuthContextProvider(props) {
 
   //server check for logged in
   async function getLoggedIn() {
-    const loggedInRes = await axios.get("https://web-dev-blogger.herokuapp.com/auth/loggedIn");
+    const loggedInRes = await axios.get("/auth/loggedIn");
     setLoggedIn(loggedInRes.data);
     console.log(loggedInRes.data + 'login');
   }
   //server check for admin
   async function getAdmin() {
-    const adminRes = await axios.get("http://localhost:5000/auth/admin");
+    const adminRes = await axios.get("/auth/admin");
     setAdmin(adminRes.data);
     console.log(adminRes.data + 'admin');
   }
