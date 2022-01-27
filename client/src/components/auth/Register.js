@@ -27,7 +27,7 @@ async function register(e) {
             passwordVerify,
             role
         };
-        await axios.post('http://localhost:5000/auth/register', registerData, {
+        await axios.post('auth/register', registerData, {
             withCredentials: true
             });
         //await getting the checks if logged in or admin
