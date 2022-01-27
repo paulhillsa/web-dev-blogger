@@ -17,7 +17,7 @@ function LogOutButton() {
 
   //logout function
   async function logOut() {
-    await axios.get("auth/logout");
+    await axios.get("web-dev-blogger.herokuapp.com/auth/logout");
     //checks
     await getLoggedIn();
     await getAdmin();
