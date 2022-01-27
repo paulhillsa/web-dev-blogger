@@ -23,7 +23,7 @@ async function login(e) {
             email,
             password,
         };
-        await axios.post('auth/login', loginData, {
+        await axios.post('web-dev-blogger.herokuapp.com/auth/login', loginData, {
             withCredentials: true
             });
         //await getting the checks if logged in or admin
