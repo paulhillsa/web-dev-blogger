@@ -17,7 +17,7 @@ function LogOutButton() {
 
   //logout function
   async function logOut() {
-    await axios.get("http://localhost:5000/auth/logout");
+    await axios.get("auth/logout");
     //checks
     await getLoggedIn();
     await getAdmin();
