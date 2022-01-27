@@ -27,7 +27,7 @@ function Blogs(props) {
     
     //get all blogs
     React.useEffect(() => {
-        axios.get('http://localhost:5000/blog/')
+        axios.get('blog/')
         .then(res => {
             setBlogs(res.data);
         })
@@ -50,7 +50,7 @@ function Blogs(props) {
 
     //get blog by id to edit
     const getBlog = (id) => {
-        axios.get(`http://localhost:5000/blog/${id}`)
+        axios.get(`blog/${id}`)
         .then(res => {
             let data = res.data;
             setTitle(data.title);
@@ -67,7 +67,7 @@ function Blogs(props) {
 
     //edit a blog
     const editBlog = (id) => {
-        axios.put(`http://localhost:5000/blog/edit/${id}`, {
+        axios.put(`blog/edit/${id}`, {
             title,
             caption,
             content,
@@ -93,7 +93,7 @@ function Blogs(props) {
             imageURL,
             author
         };
-        axios.post('http://localhost:5000/blog/add', blogData)
+        axios.post('blog/add', blogData)
         .then(res => {
             console.log(res.data);
             window.location.reload();
