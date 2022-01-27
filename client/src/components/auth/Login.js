@@ -23,7 +23,7 @@ async function login(e) {
             email,
             password,
         };
-        await axios.post('http://localhost:5000/auth/login', loginData, {
+        await axios.post('auth/login', loginData, {
             withCredentials: true
             });
         //await getting the checks if logged in or admin
