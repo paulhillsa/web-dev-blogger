@@ -55,7 +55,7 @@ I will be using React-Bootstrap due to it's convenience and to ensure a general 
 
 Further I will be using CSS for all other custom styling needs.
 
-# System Requirements Specification: 
+# <a name="system-requirements"> </a>  System Requirements Specification: 
 
 ## How this application will work:
 
@@ -167,7 +167,7 @@ As an administrator, I want to be able to log in to my account, so that I can us
 As an administrator, I want to be able to log out of my account, so that I can log out of the app.
 
 
-# How to use the app:
+# <a name="app-usage"> </a> How to use the app:
 
 ### To run locally:
 
