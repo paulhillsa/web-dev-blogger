@@ -27,7 +27,7 @@ function Blogs(props) {
     
     //get all blogs
     React.useEffect(() => {
-        axios.get('web-dev-blogger.herokuapp.com/blog/')
+        axios.get('blog/')
         .then(res => {
             setBlogs(res.data);
         })
@@ -38,7 +38,7 @@ function Blogs(props) {
 
     //delete a blog
     const deleteBlog = (id) => {
-        axios.delete('web-dev-blogger.herokuapp.com/blog/delete/${id}')
+        axios.delete('blog/delete/${id}')
         .then(res => {
             console.log(res.data);
             window.location.reload();
@@ -50,7 +50,7 @@ function Blogs(props) {
 
     //get blog by id to edit
     const getBlog = (id) => {
-        axios.get('web-dev-blogger.herokuapp.com/blog/${id}')
+        axios.get('blog/${id}')
         .then(res => {
             let data = res.data;
             setTitle(data.title);
@@ -67,7 +67,7 @@ function Blogs(props) {
 
     //edit a blog
     const editBlog = (id) => {
-        axios.put('web-dev-blogger.herokuapp.com/blog/edit/${id}', {
+        axios.put('blog/edit/${id}', {
             title,
             caption,
             content,
@@ -93,7 +93,7 @@ function Blogs(props) {
             imageURL,
             author
         };
-        axios.post('web-dev-blogger.herokuapp.com/blog/add', blogData)
+        axios.post('blog/add', blogData)
         .then(res => {
             console.log(res.data);
             window.location.reload();
